@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1fr 1fr 1fr 1fr */
+    grid-template-rows: repeat(2, 1fr); /* 1fr 1fr */
+    gap: 24px;
+    padding: 40px 0;
+}
+
+.item {
+    min-height: 200px;
+    border: 5px solid darkorchid;
+    border-radius: 8px;
+    font-size: 40px;
+    display: grid;
+    place-items: center;
+}
+
+._lg {
+    grid-row: 2 span;
+    grid-column: 2 span;
+}
+
+._md {
+    grid-column: 2 span;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+    padding: 40px 0;
+}
+
+._lg2 {
+    grid-row: 2 span;
+    grid-column: 2 span;
+}
+
+._md2 {
+    grid-column: 5 span;
+}
+
+.wrapper3 {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: repeat(5, 1fr); /* Так как нету там конента используется это свойство */
+    gap: 24px;
+    grid-template-areas: 
+    "h h"
+    "a m"
+    "a m"
+    "a m"
+    "f f"
+    ;
+}
+
+.gridArea {
+    min-height: 200px;
+    background: cornflowerblue;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.header {
+    grid-area: h;
+}
+
+.aside {
+    grid-area: a;
+}
+
+.main {
+    grid-area: m;
+}
+
+.footer {
+    grid-area: f;
+}
